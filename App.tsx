@@ -1,5 +1,4 @@
 import React from "react";
-import { UserIdentification } from "./src/pages/userIdentification";
 import Routes from "./src/routes/index";
 
 import AppLoading from "expo-app-loading";

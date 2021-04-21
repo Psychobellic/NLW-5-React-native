@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import { useNavigation } from "@react-navigation/core";
 import { Button } from "../components/Button";
+
 import colors from "../styles/colors";
 import fonts from "../styles/fonts";
 
@@ -21,6 +22,7 @@ export function UserIdentification() {
 	const [name, setName] = useState<string>();
 
 	const nav = useNavigation();
+
 	function handleSubmit() {
 		nav.navigate("Confirmation");
 	}
@@ -38,7 +40,9 @@ export function UserIdentification() {
 		setIsFilled(!!value);
 		setName(value);
 	}
-
+	async function user() {
+		return name;
+	}
 	return (
 		<>
 			<SafeAreaView style={styles.container}>
